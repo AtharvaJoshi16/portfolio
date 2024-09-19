@@ -1,0 +1,37 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run build:svg && next dev",
+    "build": "next build",
+    "build:svg": "svgr src/assets --out-dir src/icons --ext tsx --icon 72",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-toast": "^1.2.1",
+    "@tabler/icons-react": "^3.16.0",
+    "class-variance-authority": "^0.7.0",
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.5.4",
+    "mini-svg-data-uri": "^1.4.4",
+    "next": "14.2.11",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "react-responsive": "^10.0.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
