@@ -20,6 +20,7 @@ export const Header = () => {
             onClick={() => {
               copyText(contacts.email);
               toast({
+                duration: 2000,
                 variant: "transparent",
                 className: "p-2 w-fit",
                 description: (
@@ -44,6 +45,7 @@ export const Header = () => {
             onClick={() => {
               copyText(contacts.phone);
               toast({
+                duration: 2000,
                 variant: "transparent",
                 className: "p-2 w-fit left-auto",
                 description: (
