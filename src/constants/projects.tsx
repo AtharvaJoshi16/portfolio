@@ -1,16 +1,24 @@
+import { Button } from "@/components/ui/button";
 import { ProjectCardProps } from "@/customs/project-card";
 import {
   Algolia,
+  Java,
   Jest,
   Magnolia,
   Mui,
+  Mysql,
   Next,
   React,
+  ReactFlow,
   Redux,
   Sass,
+  Shadcn,
+  Springboot,
   Turbo,
+  Tw,
   Uberall,
 } from "@/icons";
+import { IconLink } from "@tabler/icons-react";
 
 export const projects: ProjectCardProps[] = [
   {
@@ -94,3 +102,96 @@ export const projects: ProjectCardProps[] = [
     ],
   },
 ];
+
+export const personalProjects: ProjectCardProps[] = [
+  {
+    title: "Flow Nodes",
+    link: "https://develop.d4xajhu5z1ils.amplifyapp.com/canvas",
+    repos: { fe: "https://github.com/AtharvaJoshi16/flow-nodes" },
+    description: [
+      "A web application that enables user to create roadmaps and schemas using drag and drop options",
+      "Developed as part of trying out React Flow library",
+    ],
+    technologies: [
+      { title: "Next.js", icon: <Next /> },
+      { title: "React Flow", icon: <ReactFlow /> },
+      { title: "React Toolkit", icon: <Redux /> },
+      { title: "Shadcn", icon: <Shadcn /> },
+      { title: "TailwindCSS", icon: <Tw /> },
+    ],
+  },
+  {
+    title: "Job Finder App",
+    repos: {
+      fe: "https://github.com/AtharvaJoshi16/job-portal-fe",
+      be: "https://github.com/AtharvaJoshi16/job-portal-be",
+    },
+    description: [
+      "Developed a fullstack application using MERN Stack that enables an employee to find a relevant job and an employer to post jobs as per requirements.",
+    ],
+    technologies: [
+      {
+        title: "MERN Stack",
+        icon: (
+          <img
+            src="/src/assets/mern.png"
+            alt="mern-logo"
+            width={30}
+            height={30}
+          />
+        ),
+      },
+      { title: "Material UI", icon: <Mui /> },
+      { title: "Shadcn", icon: <Shadcn /> },
+    ],
+  },
+  {
+    title: "Taskman API",
+    repos: { be: "https://github.com/AtharvaJoshi16/taskman" },
+    description: [
+      "Developed a microservice that enables user to perform CRUD operations his various tasks, epics or subtasks. Epics include multiple tasks and tasks include multiple subtasks.",
+    ],
+    technologies: [
+      {
+        title: "Java",
+        icon: <Java />,
+      },
+      { title: "Springboot", icon: <Springboot /> },
+      { title: "MySQL", icon: <Mysql /> },
+    ],
+  },
+];
+
+export const hoverCardItems = personalProjects.map((project) => ({
+  title: (
+    <div className="flex items-center justify-between">
+      <h3 className="font-semibold text-indigo-100">{project.title}</h3>
+    </div>
+  ),
+  description: (
+    <div className="flex flex-col gap-1 text-justify">
+      {project.description[0]}
+      {project.repos && (
+        <>
+          {project.repos.fe && (
+            <div className="flex items-center gap-1">
+              <Button size="icon" variant="ghost">
+                <IconLink width="18" />
+              </Button>
+              <h3>Frontend Repo</h3>
+            </div>
+          )}
+          {project.repos.be && (
+            <div className="flex items-center gap-1">
+              <Button size="icon" variant="ghost">
+                <IconLink width="18" />
+              </Button>
+              <h3>Backend Repo</h3>
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  ),
+  link: project.link,
+}));

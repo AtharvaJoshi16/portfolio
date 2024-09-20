@@ -9,8 +9,13 @@ export interface ProjectCardProps {
     title: string;
     icon: JSX.Element;
   }[];
-  role: string;
-  duration: string;
+  role?: string;
+  duration?: string;
+  link?: string;
+  repos?: {
+    fe?: string;
+    be?: string;
+  };
 }
 
 export const ProjectCard = ({
