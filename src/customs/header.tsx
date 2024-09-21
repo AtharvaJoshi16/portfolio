@@ -9,13 +9,13 @@ import { Statistics } from "./statistics";
 export const Header = () => {
   const { toast } = useToast();
   return (
-    <div className="w-full flex items-center justify-between">
-      <div className="w-full flex items-center gap-2">
+    <div className="w-full flex flex-col gap-4 xl:gap-0 xl:flex-row xl:items-center xl:justify-between">
+      <div className="w-full flex flex-col items-center sm:flex-row gap-2">
         <h2 className="text-slate-50 text-4xl font-bold">
           {Homepage.NAME}
           <span className="text-indigo-400">.</span>
         </h2>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col items-center sm:items-start gap-4">
           <GradientButton2
             onClick={() => {
               copyText(contacts.email);

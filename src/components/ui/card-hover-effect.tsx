@@ -11,6 +11,7 @@ export const HoverEffect = ({
     title: ReactNode;
     description: ReactNode;
     link?: string;
+    footer: ReactNode;
   }[];
   className?: string;
 }) => {
@@ -25,6 +26,7 @@ export const HoverEffect = ({
       title: ReactNode;
       description: ReactNode;
       link?: string;
+      footer: ReactNode;
     };
     hovIndex: number | null;
     idx: number;
@@ -48,9 +50,10 @@ export const HoverEffect = ({
             />
           )}
         </AnimatePresence>
-        <Card>
+        <Card className="relative">
           <CardTitle>{item.title}</CardTitle>
           <CardDescription>{item.description}</CardDescription>
+          <CardFooter>{item.footer}</CardFooter>
         </Card>
       </>
     );
@@ -68,6 +71,7 @@ export const HoverEffect = ({
           <Link
             href={item?.link}
             key={item?.link}
+            target="_blank"
             className="relative group  block p-2 h-full w-full"
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -102,8 +106,8 @@ export const Card = ({
         className
       )}
     >
-      <div className="relative z-50">
-        <div className="p-4">{children}</div>
+      <div className="relative z-50 h-full">
+        <div className="p-4 h-full">{children}</div>
       </div>
     </div>
   );
@@ -131,11 +135,21 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "min-h-[250px] mt-4 text-zinc-400 tracking-wide leading-relaxed text-sm",
         className
       )}
     >
       {children}
     </p>
   );
+};
+
+export const CardFooter = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) => {
+  return <div className={cn("absolute bottom-4", className)}>{children}</div>;
 };

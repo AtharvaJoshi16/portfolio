@@ -17,7 +17,17 @@ export default function ProjectsPage() {
       {projects.map((project) => (
         <ProjectCard {...project} />
       ))}
-      <HoverEffect items={hoverCardItems} />
+      <div className="mt-8">
+        <div className="flex items-center gap-4">
+          <h3 className="text-4xl font-bold text-indigo-300">
+            Personal Projects
+          </h3>
+          {[1, 2].map(() => (
+            <Image src={fireIcon} width={24} height={24} alt="fire-icon" />
+          ))}
+        </div>
+        <HoverEffect items={hoverCardItems} />
+      </div>
     </div>
   );
 }

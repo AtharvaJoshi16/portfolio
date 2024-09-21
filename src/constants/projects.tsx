@@ -1,4 +1,7 @@
-import { Button } from "@/components/ui/button";
+import mern from "@/assets/mern.png";
+import { Description } from "@/customs/personal-project-card/description";
+import { Footer } from "@/customs/personal-project-card/footer";
+import { Title } from "@/customs/personal-project-card/title";
 import { ProjectCardProps } from "@/customs/project-card";
 import {
   Algolia,
@@ -18,7 +21,7 @@ import {
   Tw,
   Uberall,
 } from "@/icons";
-import { IconLink } from "@tabler/icons-react";
+import Image from "next/image";
 
 export const projects: ProjectCardProps[] = [
   {
@@ -111,13 +114,14 @@ export const personalProjects: ProjectCardProps[] = [
     description: [
       "A web application that enables user to create roadmaps and schemas using drag and drop options",
       "Developed as part of trying out React Flow library",
+      "Developed using Next.js App router, Typescript, React Flow, Redux Toolkit, TailwindCSS, Shadcn-UI.",
     ],
     technologies: [
-      { title: "Next.js", icon: <Next /> },
-      { title: "React Flow", icon: <ReactFlow /> },
-      { title: "React Toolkit", icon: <Redux /> },
-      { title: "Shadcn", icon: <Shadcn /> },
-      { title: "TailwindCSS", icon: <Tw /> },
+      { title: "Next.js", icon: <Next width={30} height={30} /> },
+      { title: "React Flow", icon: <ReactFlow width={30} height={30} /> },
+      { title: "React Toolkit", icon: <Redux width={30} height={30} /> },
+      { title: "Shadcn", icon: <Shadcn width={30} height={30} /> },
+      { title: "TailwindCSS", icon: <Tw width={30} height={30} /> },
     ],
   },
   {
@@ -128,21 +132,15 @@ export const personalProjects: ProjectCardProps[] = [
     },
     description: [
       "Developed a fullstack application using MERN Stack that enables an employee to find a relevant job and an employer to post jobs as per requirements.",
+      "Developed using Typescript, React.js, Material UI, Shadcn-UI as frontend and Express.js, MongoDB as backend.",
     ],
     technologies: [
       {
         title: "MERN Stack",
-        icon: (
-          <img
-            src="/src/assets/mern.png"
-            alt="mern-logo"
-            width={30}
-            height={30}
-          />
-        ),
+        icon: <Image src={mern} alt="mern-logo" width={120} height={30} />,
       },
-      { title: "Material UI", icon: <Mui /> },
-      { title: "Shadcn", icon: <Shadcn /> },
+      { title: "Material UI", icon: <Mui width="30" height="30" /> },
+      { title: "Shadcn", icon: <Shadcn width="30" height="30" /> },
     ],
   },
   {
@@ -150,48 +148,57 @@ export const personalProjects: ProjectCardProps[] = [
     repos: { be: "https://github.com/AtharvaJoshi16/taskman" },
     description: [
       "Developed a microservice that enables user to perform CRUD operations his various tasks, epics or subtasks. Epics include multiple tasks and tasks include multiple subtasks.",
+      "Developed using Springboot, Java and MySQL.",
     ],
     technologies: [
       {
         title: "Java",
-        icon: <Java />,
+        icon: <Java width="30" height="30" />,
       },
-      { title: "Springboot", icon: <Springboot /> },
-      { title: "MySQL", icon: <Mysql /> },
+      { title: "Springboot", icon: <Springboot width="30" height="30" /> },
+      { title: "MySQL", icon: <Mysql width="30" height="30" /> },
+    ],
+  },
+  {
+    title: "Movies App",
+    link: "https://develop.d1bbhsl076xzev.amplifyapp.com/",
+    repos: { fe: "https://github.com/AtharvaJoshi16/movies-app" },
+    description: [
+      "Developed a website that provides user with reviews and highlights of a movie.",
+      "Next.js, Shadcn and Tailwind learning based project",
+      "Developed using Next.js App router with TailwindCSS and Shadcn-UI.",
+    ],
+    technologies: [
+      {
+        title: "Java",
+        icon: <Java width="30" height="30" />,
+      },
+      { title: "Springboot", icon: <Springboot width="30" height="30" /> },
+      { title: "MySQL", icon: <Mysql width="30" height="30" /> },
+    ],
+  },
+  {
+    title: "Portfolio (This website)",
+    repos: { fe: "https://github.com/AtharvaJoshi16/portfolio" },
+    link: "/",
+    description: [
+      "Developed this website that provides viewer with my career portfolio and demonstrates my frontend skills as well.",
+      "Developed using Next.js App router, TailwindCSS, Aceternity UI and Shadcn-UI",
+    ],
+    technologies: [
+      {
+        title: "Java",
+        icon: <Java width="30" height="30" />,
+      },
+      { title: "Springboot", icon: <Springboot width="30" height="30" /> },
+      { title: "MySQL", icon: <Mysql width="30" height="30" /> },
     ],
   },
 ];
 
 export const hoverCardItems = personalProjects.map((project) => ({
-  title: (
-    <div className="flex items-center justify-between">
-      <h3 className="font-semibold text-indigo-100">{project.title}</h3>
-    </div>
-  ),
-  description: (
-    <div className="flex flex-col gap-1 text-justify">
-      {project.description[0]}
-      {project.repos && (
-        <>
-          {project.repos.fe && (
-            <div className="flex items-center gap-1">
-              <Button size="icon" variant="ghost">
-                <IconLink width="18" />
-              </Button>
-              <h3>Frontend Repo</h3>
-            </div>
-          )}
-          {project.repos.be && (
-            <div className="flex items-center gap-1">
-              <Button size="icon" variant="ghost">
-                <IconLink width="18" />
-              </Button>
-              <h3>Backend Repo</h3>
-            </div>
-          )}
-        </>
-      )}
-    </div>
-  ),
+  title: <Title title={project.title} link={project.link} />,
+  description: <Description description={project.description} />,
   link: project.link,
+  footer: <Footer repos={project.repos} technologies={project.technologies} />,
 }));

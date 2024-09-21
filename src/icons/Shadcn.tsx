@@ -10,7 +10,7 @@ const SvgShadcn = (props) => (
   >
     <path fill="none" d="M0 0h256v256H0z" />
     <path
-      fill="none"
+      fill="#fff"
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"

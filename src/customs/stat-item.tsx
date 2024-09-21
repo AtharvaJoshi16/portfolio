@@ -6,9 +6,9 @@ export const StatItem = ({
   text: string;
 }) => {
   return (
-    <p className="w-full text-white flex gap-3 items-center">
-      <span className="text-5xl font-bold">{number}</span>
-      <span className="text-wrap max-w-30">{text}</span>
+    <p className="w-full text-white flex justify-between md:justify-center xl:justify-start gap-3 items-center">
+      <span className="text-3xl md:text-5xl font-bold">{number}</span>
+      <span className="text-wrap max-w-30 text-end">{text}</span>
     </p>
   );
 };

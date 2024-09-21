@@ -1,14 +1,16 @@
 "use client";
 import { Card } from "./card";
-import { Icon } from "./icon";
+import { TechCards } from "./tech-cards";
+
+export interface Technology {
+  title: string;
+  icon: JSX.Element;
+}
 
 export interface ProjectCardProps {
   title: string;
   description: string[];
-  technologies: {
-    title: string;
-    icon: JSX.Element;
-  }[];
+  technologies: Technology[];
   role?: string;
   duration?: string;
   link?: string;
@@ -38,11 +40,7 @@ export const ProjectCard = ({
             <li className="text-slate-50 text-justify">{des}</li>
           ))}
         </ul>
-        <div className="flex items-center gap-[30px] m-2">
-          {technologies.map((tech) => (
-            <Icon tooltipText={tech.title}>{tech.icon}</Icon>
-          ))}
-        </div>
+        <TechCards technologies={technologies} />
       </div>
     </Card>
   );
