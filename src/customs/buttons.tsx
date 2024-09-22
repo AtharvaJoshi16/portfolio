@@ -6,15 +6,21 @@ import { GradientButton } from "./gradient-button";
 
 export const Buttons = () => {
   return (
-    <div className="flex items-center gap-5">
+    <div className="flex items-center justify-center xl:justify-start flex-col md:flex-row gap-5 mt-5">
       <Link href={Homepage.RESUME_LINK} target="_blank">
-        <GradientButton text="DOWNLOAD RESUME" icon={<IconDownload />} />
+        <GradientButton
+          className="w-full md:w-fit"
+          text="DOWNLOAD RESUME"
+          icon={<IconDownload />}
+        />
       </Link>
-      {smLinks.map((item) => (
-        <Link href={item.href} target="_blank">
-          <GradientButton icon={item.icon} title={item.name} />
-        </Link>
-      ))}
+      <div className="flex items-center gap-5">
+        {smLinks.map((item) => (
+          <Link href={item.href} target="_blank">
+            <GradientButton icon={item.icon} title={item.name} />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
