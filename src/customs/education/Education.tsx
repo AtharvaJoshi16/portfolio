@@ -8,7 +8,7 @@ export const Education = () => {
   const { SSC, HSC, BE } = Homepage.EDUCATION;
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center flex-wrap gap-10">
       <PinContainer href={SSC.href} title={SSC.linkText}>
         <DetailsCard
           image={ssc}

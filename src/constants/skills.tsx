@@ -18,86 +18,90 @@ import {
   Tw,
 } from "@/icons";
 
+const commonClasses = "w-[36px] h-[36px] lg:w-auto md:w-[60px] md:h-[60px]";
+
+const wideIconsClasses = "w-[56px] h-[56px] md:w-[96px] md:h-[96px]";
+
 export const skills = {
   technologies: [
     {
       title: "React.js",
-      icon: <React />,
+      icon: <React className={commonClasses} />,
       badge: <BadgeText text="IV" />,
     },
     {
       title: "Redux",
-      icon: <Redux />,
+      icon: <Redux className={commonClasses} />,
       badge: <BadgeText text="III" />,
     },
     {
       title: "Next.js",
-      icon: <Next />,
+      icon: <Next className={commonClasses} />,
       badge: <BadgeText text="IV" />,
     },
     {
       title: "Css",
-      icon: <Css />,
+      icon: <Css className={commonClasses} />,
       badge: <BadgeText text="II" />,
     },
     {
       title: "Tailwind",
-      icon: <Tw />,
+      icon: <Tw className={commonClasses} />,
       badge: <BadgeText text="II" />,
     },
     {
       title: "Storybook",
-      icon: <Sb />,
+      icon: <Sb className={commonClasses} />,
     },
     {
       title: "Sass",
-      icon: <Sass />,
+      icon: <Sass className={commonClasses} />,
       badge: <BadgeText text="III" />,
     },
   ],
   languages: [
     {
       title: "Javascript ES6",
-      icon: <Js />,
+      icon: <Js className={commonClasses} />,
       badge: <BadgeText text="III" />,
     },
     {
       title: "Typescript",
-      icon: <Ts />,
+      icon: <Ts className={commonClasses} />,
       badge: <BadgeText text="III" />,
     },
     {
       title: "Java",
-      icon: <Java />,
+      icon: <Java className={commonClasses} />,
       badge: <BadgeText text="I" />,
     },
     {
       title: "PostgreSQL",
-      icon: <Postgresql />,
+      icon: <Postgresql className={commonClasses} />,
       badge: <BadgeText text="I" />,
     },
     {
       title: "Python",
-      icon: <Python5 />,
+      icon: <Python5 className={commonClasses} />,
       badge: <BadgeText text="II" />,
     },
   ],
   tools: [
     {
       title: "Jira",
-      icon: <JiraLight />,
+      icon: <JiraLight className={wideIconsClasses} />,
     },
     {
       title: "Confluence",
-      icon: <ConfluenceLight />,
+      icon: <ConfluenceLight className={wideIconsClasses} />,
     },
     {
       title: "Azure Devops",
-      icon: <AzureDevops />,
+      icon: <AzureDevops className={commonClasses} />,
     },
     {
       title: "Git",
-      icon: <Git />,
+      icon: <Git className={commonClasses} />,
     },
   ],
 };
