@@ -20,8 +20,10 @@ export const DetailsCard = ({
 }) => {
   return (
     <div className="flex flex-col gap-2 text-slate-50">
-      <h4 className="font-semibold text-xl text-center">{title}</h4>
-      <h4 className="font-semibold text-2xl text-indigo-300 text-center">
+      <h4 className="font-semibold text-base sm:text-lg md:text-xl text-center">
+        {title}
+      </h4>
+      <h4 className="font-semibold text-base sm:text-lg md:text-2xl text-indigo-300 text-center">
         {passoutYear}
       </h4>
       <div className="bg-slate-50 w-full h-full p-2 rounded-md">
@@ -33,7 +35,7 @@ export const DetailsCard = ({
           alt={title!}
         />
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 text-sm sm:text-base mt-4">
         {board && <h4>{board}</h4>}
         {university && <h4>{university}</h4>}
         {stream && <h4>{stream}</h4>}

@@ -26,20 +26,14 @@ export const Previous = () => {
 
 export const CustomCarousel = ({ items }: { items: any[] }) => {
   return (
-    <Carousel
-      className="bg-transparent z-50"
-      opts={{
-        loop: true,
-      }}
-    >
+    <Carousel className="bg-transparent z-50 -mx-12 md:mx-0">
       <CarouselContent className="p-4">
         {items.map((item) => (
-          <CarouselItem className="basis-1/2 sm:basis-1/3 lg:basis-1/4 xl:basis-1/5 flex justify-center items-center">
+          <CarouselItem className="basis-1/3 sm:basis-1/4 xl:basis-1/5 flex justify-center items-center">
             {item}
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className="bg-gradient-to-r from-white to-transparent h-full w-10" />
       <Previous />
       <Next />
     </Carousel>

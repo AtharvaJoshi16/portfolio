@@ -28,7 +28,7 @@ export const Container = ({
           <IconMapPin className="text-indigo-400" />
           {loc}
         </div>
-        <p className="text-justify">{description}</p>
+        <p className="text-justify break-all">{description}</p>
       </div>
     </div>
   );

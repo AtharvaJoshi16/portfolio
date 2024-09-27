@@ -6,6 +6,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
+import classNames from "classnames";
 import {
   AnimatePresence,
   MotionValue,
@@ -15,7 +16,7 @@ import {
   useTransform,
 } from "framer-motion";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import React, { ReactElement, useRef, useState } from "react";
 import { Tooltip } from "./tooltip";
 
 export const FloatingDock = ({
@@ -74,7 +75,9 @@ const FloatingDockMobile = ({
                   className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
                 >
                   <div className="flex items-center justify-center">
-                    {item.icon}
+                    {React.cloneElement(item.icon as ReactElement, {
+                      className: "text-indigo-900 h-5 w-5",
+                    })}
                   </div>
                 </Link>
               </motion.div>
@@ -185,7 +188,12 @@ function IconContainer({
           style={{ width: widthIcon, height: heightIcon }}
           className="flex items-center justify-center"
         >
-          {icon}
+          {React.cloneElement(icon as ReactElement, {
+            className: classNames(
+              { "text-indigo-900/50": hovered },
+              "text-indigo-900"
+            ),
+          })}
         </motion.div>
       </motion.div>
     </Link>

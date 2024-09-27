@@ -1,16 +1,13 @@
 import { skills } from "@/constants/skills";
-import { useResponsive } from "@/hooks/useResponsive";
 import { CustomCarousel } from "../custom-carousel";
 import { SkillsCard } from "./SkillsCard";
 
 export const Skills = () => {
-  const { isMobile } = useResponsive();
+  const headerClasses = "text-lg md:text-xl text-indigo-300 font-bold";
   return (
-    <div className="flex flex-col gap-[30px] m-10 md:m-20">
+    <div className="flex flex-col gap-[25px] my-10 mx-6 md:my-20 md:mx-10">
       <>
-        <h3 className="text-2xl text-indigo-300 font-bold">
-          Programming Languages
-        </h3>
+        <h3 className={headerClasses}>Programming Languages</h3>
         <CustomCarousel
           items={skills.languages.map((skill) => (
             <SkillsCard {...skill} />
@@ -18,7 +15,7 @@ export const Skills = () => {
         />
       </>
       <>
-        <h3 className="text-2xl text-indigo-300 font-bold">Technologies</h3>
+        <h3 className={headerClasses}>Technologies</h3>
         <CustomCarousel
           items={skills.technologies.map((skill) => (
             <SkillsCard {...skill} />
@@ -26,7 +23,7 @@ export const Skills = () => {
         />
       </>
       <>
-        <h3 className="text-2xl text-indigo-300 font-bold">Tools</h3>
+        <h3 className={headerClasses}>Tools</h3>
         <CustomCarousel
           items={skills.tools.map((skill) => (
             <SkillsCard {...skill} />
