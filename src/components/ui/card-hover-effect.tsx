@@ -62,7 +62,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
+        "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 py-5 md:py-10",
         className
       )}
     >
@@ -102,7 +102,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-slate-900 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-2 md:p-4 overflow-hidden bg-slate-900 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -135,7 +135,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "min-h-[250px] mt-4 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "min-h-[200px] md:min-h-[250px] mt-4 text-zinc-400 tracking-wide leading-relaxed text-sm",
         className
       )}
     >
@@ -151,5 +151,11 @@ export const CardFooter = ({
   className?: string;
   children: React.ReactNode;
 }) => {
-  return <div className={cn("absolute bottom-4", className)}>{children}</div>;
+  return (
+    <div
+      className={cn("relative lg:absolute mt-4 lg:mt-0 lg:bottom-4", className)}
+    >
+      {children}
+    </div>
+  );
 };

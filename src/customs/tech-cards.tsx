@@ -10,7 +10,7 @@ export const TechCards = ({
   gradient?: boolean;
 }) => {
   return (
-    <div className="flex items-center gap-[30px] flex-wrap">
+    <div className="flex items-center justify-center md:justify-start gap-6 w-full md:gap-10 flex-wrap mt-4 md:mt-0 md:m-5">
       {technologies.map((tech) =>
         gradient ? (
           <SkillsCard small={gradient} icon={tech.icon} title={tech.title} />
