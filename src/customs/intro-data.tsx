@@ -10,9 +10,11 @@ export const IntroData = () => {
   return (
     <div className="flex items-center gap-10 xl:gap-15 flex-col w-full xl:flex-row">
       <div className="flex order-2 xl:order-1 flex-col w-fit">
-        <h3 className="text-2xl text-center xl:text-start z-20">{ROLE}</h3>
+        <h3 className="text-xl md:text-2xl text-center xl:text-start z-20">
+          {ROLE}
+        </h3>
         <TypewriterEffectSmooth className="z-20" words={TYPEWRITER_WORDS} />
-        <p className="text-lg z-20 w-full text-justify xl:w-[90%]">
+        <p className="text-sm md:text-base z-20 w-full text-justify xl:w-[90%]">
           {DESCRIPTION}
         </p>
       </div>

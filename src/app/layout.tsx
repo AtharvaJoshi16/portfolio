@@ -14,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased bg-slate-800 mx-4 xl:mx-20`}>
+      <body
+        className={`antialiased bg-slate-800 m-2 sm:m-4 md:m-6 lg:m-8 xl:m-10`}
+      >
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

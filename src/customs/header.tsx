@@ -11,7 +11,7 @@ export const Header = () => {
   return (
     <div className="w-full flex flex-col gap-4 xl:gap-0 xl:flex-row xl:items-center xl:justify-between">
       <div className="w-full flex flex-col items-center sm:flex-row gap-2">
-        <h2 className="text-slate-50 text-4xl font-bold">
+        <h2 className="text-slate-50 text-2xl md:text-4xl font-bold">
           {Homepage.NAME}
           <span className="text-indigo-400">.</span>
         </h2>
