@@ -74,4 +74,11 @@ export const Homepage = {
         "Collaborated in the development of private UI libraries as well as web applications according to client requirements in the form of user stories as well as defects and change requests.",
     },
   ],
+  ABOUT_ME: {
+    header: "Hands dirty in every new tech",
+    description: [
+      "As a Frontend Developer, I build pixel perfect UIs using React and corresponding frameworks. I have been into React development since early 2020 and have been constantly upgrading myself since then.",
+      "I aim to place myself at an expert level and generate content to help other developers excel in this field.",
+    ],
+  },
 };

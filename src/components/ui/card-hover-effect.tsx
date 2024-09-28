@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { ReactNode, useState } from "react";
 
 export const HoverEffect = ({
@@ -66,28 +65,15 @@ export const HoverEffect = ({
         className
       )}
     >
-      {items.map((item, idx) =>
-        item.link ? (
-          <Link
-            href={item?.link}
-            key={item?.link}
-            target="_blank"
-            className="relative group  block p-2 h-full w-full"
-            onMouseEnter={() => setHoveredIndex(idx)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            <Animator hovIndex={hoveredIndex} idx={idx} item={item} />
-          </Link>
-        ) : (
-          <div
-            className="relative group  block p-2 h-full w-full"
-            onMouseEnter={() => setHoveredIndex(idx)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            <Animator hovIndex={hoveredIndex} idx={idx} item={item} />
-          </div>
-        )
-      )}
+      {items.map((item, idx) => (
+        <div
+          className="relative group  block p-2 h-full w-full"
+          onMouseEnter={() => setHoveredIndex(idx)}
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
+          <Animator hovIndex={hoveredIndex} idx={idx} item={item} />
+        </div>
+      ))}
     </div>
   );
 };

@@ -5,7 +5,10 @@
  **/
 "use client";
 import { cn } from "@/lib/utils";
-import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
+import {
+  IconLayoutNavbarCollapseFilled,
+  IconLayoutNavbarExpandFilled,
+} from "@tabler/icons-react";
 import classNames from "classnames";
 import {
   AnimatePresence,
@@ -44,6 +47,7 @@ const FloatingDockMobile = ({
   className?: string;
 }) => {
   const [open, setOpen] = useState(false);
+  const iconClasses = "h-5 w-5 text-indigo-800/80";
   return (
     <div className={cn("relative block md:hidden", className)}>
       <AnimatePresence>
@@ -72,11 +76,12 @@ const FloatingDockMobile = ({
                 <Link
                   href={item.href}
                   key={item.title}
+                  onClick={() => setOpen(false)}
                   className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
                 >
                   <div className="flex items-center justify-center">
                     {React.cloneElement(item.icon as ReactElement, {
-                      className: "text-indigo-900 h-5 w-5",
+                      className: "text-indigo-800/80 h-5 w-5",
                     })}
                   </div>
                 </Link>
@@ -89,7 +94,11 @@ const FloatingDockMobile = ({
         onClick={() => setOpen(!open)}
         className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+        {open ? (
+          <IconLayoutNavbarExpandFilled className={iconClasses} />
+        ) : (
+          <IconLayoutNavbarCollapseFilled className={iconClasses} />
+        )}
       </button>
     </div>
   );
@@ -190,8 +199,8 @@ function IconContainer({
         >
           {React.cloneElement(icon as ReactElement, {
             className: classNames(
-              { "text-indigo-900/50": hovered },
-              "text-indigo-900"
+              { "text-indigo-800/60": hovered },
+              "text-indigo-800/80"
             ),
           })}
         </motion.div>
