@@ -28,7 +28,7 @@ const certifications = [
     description: [
       "Completed Full Stack Development Cohort launched by Youtuber and Developer, Harkirat Singh where I learned about intermediate and advanced level development concepts",
     ],
-    linkTitle: "100xDevs_Cohort_2_Certificate.png",
+    linkTitle: "100xDevs_Cohort_2_Cert.png",
 
     link: "https://firebasestorage.googleapis.com/v0/b/portfolio-1f6e3.appspot.com/o/100xDevs_certificate.png?alt=media&token=3cc0fce6-a0ce-4612-9cb3-dc630dd89dc0",
   },

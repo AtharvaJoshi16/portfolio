@@ -12,11 +12,11 @@ export const GalleryCard = ({
   alt: string;
 }) => {
   return (
-    <Card className="w-fit">
+    <Card className="w-fit max-w-[90vw] flex flex-col items-center gap-2">
       <Lens>
         <div className="bg-transparent w-full flex justify-center items-center">
           <Image
-            className="rounded-xl w-fit h-[200px] lg:h-[400px]"
+            className="rounded-xl w-fit h-[180px] sm:h-[200px] lg:h-[400px]"
             src={link}
             alt={alt}
             width={1200}
@@ -24,7 +24,7 @@ export const GalleryCard = ({
           />
         </div>
       </Lens>
-      <h3 className="text-slate-300 max-w-[80vw] md:max-w-[50vw] text-wrap text-sm mt-4 md:mt-8 px-5 text-center">
+      <h3 className="text-slate-400 mx-auto md:max-w-[50vw] text-wrap text-xs md:text-sm mt-4 md:mt-8 text-center">
         {caption}
       </h3>
     </Card>
