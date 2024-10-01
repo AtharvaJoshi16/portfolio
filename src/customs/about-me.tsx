@@ -32,16 +32,16 @@ const SparklesText = ({ text }: { text: string }) => (
 
 export const AboutMe = () => {
   const { ABOUT_ME } = Homepage;
-  const { header, description } = ABOUT_ME;
+  const { description } = ABOUT_ME;
   return (
     <>
-      <SparklesText text={header} />
+      {/* <SparklesText text={header} /> */}
       <div className="flex flex-col gap-4">
         <h3 className="text-lg md:text-2xl font-bold text-indigo-300">
           About Me 😃
         </h3>
         {description.map((item) => (
-          <h3 className="md:mr-20 text-justify text-sm md:text-base text-slate-100">
+          <h3 className="text-justify text-sm md:text-base text-slate-100">
             {item}
           </h3>
         ))}

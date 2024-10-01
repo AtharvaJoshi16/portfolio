@@ -5,6 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { cn } from "@/lib/utils";
 
 export const Next = () => {
   return (
@@ -24,12 +25,24 @@ export const Previous = () => {
   );
 };
 
-export const CustomCarousel = ({ items }: { items: any[] }) => {
+export const CustomCarousel = ({
+  items,
+  className,
+}: {
+  items: any[];
+  className?: string;
+}) => {
   return (
     <Carousel className="bg-transparent z-50 -mx-12 md:mx-0">
       <CarouselContent className="p-4">
-        {items.map((item) => (
-          <CarouselItem className="basis-1/3 sm:basis-1/4 xl:basis-1/5 flex justify-center items-center">
+        {items.map((item, idx) => (
+          <CarouselItem
+            key={idx}
+            className={cn(
+              "basis-1/3 sm:basis-1/4 xl:basis-1/5 flex justify-center items-center",
+              className
+            )}
+          >
             {item}
           </CarouselItem>
         ))}
