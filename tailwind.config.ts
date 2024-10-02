@@ -1,5 +1,4 @@
-import { Config } from "tailwind-merge";
-
+import type { Config } from "tailwindcss/types/config";
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 const {
@@ -87,15 +86,15 @@ const config = {
         },
         pulse: {
           "0%": {
-            opacity: 1,
+            opacity: "1",
           },
 
           "50%": {
-            opacity: 0.5,
+            opacity: "0.5",
           },
 
           "100%": {
-            opacity: 1,
+            opacity: "1",
           },
         },
       },
