@@ -3,6 +3,7 @@
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { Toaster } from "@/components/ui/toaster";
 import { links } from "@/constants/navlinks";
+import { Footer } from "@/customs/footer";
 
 export const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -14,6 +15,7 @@ export const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       />
       <Toaster />
       {children}
+      <Footer />
     </>
   );
 };

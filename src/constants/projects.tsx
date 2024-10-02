@@ -166,7 +166,7 @@ export const personalProjects: ProjectCardProps[] = [
     description: [
       "Developed a website that provides user with reviews and highlights of a movie.",
       "Next.js, Shadcn and Tailwind learning based project",
-      "Developed using Next.js App router with TailwindCSS and Shadcn-UI.",
+      "Developed using Next.js App router with TailwindCSS, Shadcn-UI and TMDB API.",
     ],
     technologies: [
       {
@@ -183,7 +183,7 @@ export const personalProjects: ProjectCardProps[] = [
     link: "/",
     description: [
       "Developed this website that provides viewer with my career portfolio and demonstrates my frontend skills as well.",
-      "Developed using Next.js App router, TailwindCSS, Aceternity UI and Shadcn-UI",
+      "Developed using Next.js App router, TailwindCSS, Aceternity UI, Shadcn-UI and Firebase Storage",
     ],
     technologies: [
       {
