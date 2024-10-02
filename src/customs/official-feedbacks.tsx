@@ -10,7 +10,7 @@ export const OfficialFeedbacks = () => {
 
   return (
     <div className="flex flex-col gap-2 mt-5">
-      <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-indigo-300">
+      <h3 className="text-lg ml-4 md:ml-2 md:text-2xl lg:text-3xl font-bold text-indigo-300">
         Project Feedbacks
       </h3>
       <InfiniteMovingCards direction="right" items={desktopData} speed="slow" />
