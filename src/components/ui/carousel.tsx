@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
@@ -8,6 +7,7 @@ import * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -19,6 +19,8 @@ type CarouselProps = {
   plugins?: CarouselPlugin;
   orientation?: "horizontal" | "vertical";
   setApi?: (api: CarouselApi) => void;
+  next?: React.ReactNode;
+  previous?: React.ReactNode;
 };
 
 type CarouselContextProps = {
@@ -53,6 +55,8 @@ const Carousel = React.forwardRef<
       setApi,
       plugins,
       className,
+      next,
+      previous,
       children,
       ...props
     },
@@ -132,6 +136,8 @@ const Carousel = React.forwardRef<
           scrollNext,
           canScrollPrev,
           canScrollNext,
+          previous,
+          next,
         }}
       >
         <div
@@ -198,7 +204,7 @@ const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+  const { orientation, scrollPrev, canScrollPrev, previous } = useCarousel();
 
   return (
     <Button
@@ -216,7 +222,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeftIcon className="h-4 w-4" />
+      {previous ?? <ChevronLeft className="h-4 w-4" />}
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -227,7 +233,7 @@ const CarouselNext = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollNext, canScrollNext } = useCarousel();
+  const { orientation, scrollNext, canScrollNext, next } = useCarousel();
 
   return (
     <Button
@@ -245,7 +251,7 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRightIcon className="h-4 w-4" />
+      {next ?? <ChevronRight className="h-4 w-4" />}
       <span className="sr-only">Next slide</span>
     </Button>
   );
