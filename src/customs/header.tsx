@@ -21,16 +21,14 @@ export const Header = () => {
               copyText(contacts.email);
               toast({
                 duration: 2000,
-                variant: "transparent",
-                className: "p-2 w-fit",
                 description: (
-                  <div className="flex items-center gap-1">
-                    <h3 className="font-semibold">Email copied to clipboard</h3>
+                  <div className="flex items-center gap-3">
                     <IconClipboardCheck
-                      width={18}
-                      height={18}
+                      width={21}
+                      height={21}
                       className="text-indigo-300"
                     />
+                    <h3 className="font-semibold">Email copied to clipboard</h3>
                   </div>
                 ),
               });
@@ -46,16 +44,14 @@ export const Header = () => {
               copyText(contacts.phone);
               toast({
                 duration: 2000,
-                variant: "transparent",
-                className: "p-2 w-fit left-auto",
                 description: (
-                  <div className="flex items-center gap-1">
-                    <h3 className="font-semibold">Phone copied to clipboard</h3>
+                  <div className="flex items-center gap-3">
                     <IconClipboardCheck
-                      width={18}
-                      height={18}
+                      width={21}
+                      height={21}
                       className="text-indigo-300"
                     />
+                    <h3 className="font-semibold">Phone copied to clipboard</h3>
                   </div>
                 ),
               });
