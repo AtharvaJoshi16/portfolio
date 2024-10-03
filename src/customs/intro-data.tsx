@@ -23,13 +23,13 @@ export const IntroData = () => {
       </div>
       <Avatar
         className={classNames(
-          "z-20 order-1 xl:order-2 aspect-square h-[180px] w-[160px] lg:h-[320px] lg:w-[300px] bg-slate-500/50",
+          "z-20 order-1 xl:order-2 aspect-square h-[180px] w-[180px] lg:h-[320px] lg:w-[320px] bg-slate-500/50 xl:mr-20 xl:mt-5",
           { "animate-pulse": loading }
         )}
       >
         <AvatarImage
           onLoad={() => setLoading(false)}
-          className="object-cover bg-black"
+          className="block object-cover bg-black"
           src="https://firebasestorage.googleapis.com/v0/b/portfolio-1f6e3.appspot.com/o/IMG_20240922_090717.jpg?alt=media&token=d77f6aad-f9ce-4561-885c-928964792fdf"
           alt="profile-pic"
         />
