@@ -1,6 +1,6 @@
 export const Homepage = {
   NAME: "Atharva",
-  ROLE: "Software Engineer",
+  ROLE: "Software Developer",
   TYPEWRITER_WORDS: [
     {
       className: "text-slate-50",

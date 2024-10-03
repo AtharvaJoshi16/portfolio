@@ -6,6 +6,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Atharva Joshi",
+  icons: {
+    icon: "favicon.jpg",
+  },
   description: "Portfolio of Atharva Joshi",
 };
 
