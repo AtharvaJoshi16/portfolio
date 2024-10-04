@@ -1,3 +1,13 @@
+import moment from "moment";
+const getYOE = () => {
+  const startDate = moment("12/1/2022"); //joining date
+  const today = moment();
+  const diff = today.diff(startDate, "years", true);
+  const nos = diff.toFixed(1).toString().split(".");
+  return nos[nos.length - 1] === "0"
+    ? parseInt(diff.toString())
+    : diff.toFixed(1);
+};
 export const Homepage = {
   NAME: "Atharva",
   ROLE: "Software Developer",
@@ -20,7 +30,7 @@ export const Homepage = {
   RESUME_LINK:
     "https://firebasestorage.googleapis.com/v0/b/portfolio-1f6e3.appspot.com/o/Resume_2_oct_2024.pdf?alt=media&token=451c96bf-5dfb-4df9-889c-2b83e394a140",
   STATISTICS: {
-    YOE: 2,
+    YOE: getYOE(),
     PROJECTS: {
       PROFESSIONAL: 2,
       PERSONAL: "5+",
