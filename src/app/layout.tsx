@@ -19,9 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Suspense fallback={null}>
-        <GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID!} />
-      </Suspense>
+      <head>
+        <Suspense fallback={null}>
+          <GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID!} />
+        </Suspense>
+      </head>
       <body
         className={`no-scrollbar antialiased bg-slate-800 m-2 sm:m-4 md:m-6 lg:m-8 xl:m-10`}
       >

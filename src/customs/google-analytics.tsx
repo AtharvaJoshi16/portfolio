@@ -18,7 +18,6 @@ export default function GoogleAnalytics({
   const pathname = usePathname();
   // SearchParams is a client side function.
   const searchParams = useSearchParams();
-
   useEffect(() => {
     const url = pathname + searchParams.toString();
 
