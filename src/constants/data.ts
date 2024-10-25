@@ -28,7 +28,7 @@ export const Homepage = {
   DESCRIPTION:
     "I excel as a Frontend Developer, building pixel perfect UI using React. I have engrossed myself in the React ecosystem since 2020, and have been actively upgrading myself with the latest updates. I also have knowledge of API development using Express or Java Springboot. I'm actively seeking Frontend or Full Stack Developer roles.",
   RESUME_LINK:
-    "https://firebasestorage.googleapis.com/v0/b/portfolio-1f6e3.appspot.com/o/Resume_2_oct_2024.pdf?alt=media&token=451c96bf-5dfb-4df9-889c-2b83e394a140",
+    "https://firebasestorage.googleapis.com/v0/b/portfolio-1f6e3.appspot.com/o/Atharva_resume_25Oct.pdf?alt=media&token=4798adc6-0776-43a7-ac30-f26272e5f937",
   STATISTICS: {
     YOE: getYOE(),
     PROJECTS: {
