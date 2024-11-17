@@ -64,14 +64,6 @@ export const Homepage = {
   },
   EXPERIENCE: [
     {
-      ROLE: "Cybersecurity Intern",
-      ORG: "Netlux Systems Pvt. Ltd.",
-      SPAN: "Sept 2021 - May 2022",
-      LOC: "Pune, Maharashtra",
-      DESCRIPTION:
-        "Studied about Vulnerability Assessment And Penetration Testing and prepared a system architecture for the project. Later, collaborated in the development of the project using technologies such as Python, Linux CLI tools, and React and managed a team of 4 to deliver it.",
-    },
-    {
       ROLE: "Associate Software Engineer",
       SUB_ROLE: "Custom Software Engineering Associate",
       ORG: "Accenture Solutions Pvt. Ltd.",
@@ -79,6 +71,14 @@ export const Homepage = {
       LOC: "Pune, Maharashtra",
       DESCRIPTION:
         "Collaborated in the development of private UI libraries as well as web applications according to client requirements in the form of user stories as well as defects and change requests.",
+    },
+    {
+      ROLE: "Cybersecurity Intern",
+      ORG: "Netlux Systems Pvt. Ltd.",
+      SPAN: "Sept 2021 - May 2022",
+      LOC: "Pune, Maharashtra",
+      DESCRIPTION:
+        "Studied about Vulnerability Assessment And Penetration Testing and prepared a system architecture for the project. Later, collaborated in the development of the project using technologies such as Python, Linux CLI tools, and React and managed a team of 4 to deliver it.",
     },
   ],
   ABOUT_ME: {

@@ -3,7 +3,7 @@ import { Container } from "./commons";
 
 export const Accenture = () => {
   const { EXPERIENCE } = Homepage;
-  const data = EXPERIENCE[1];
+  const data = EXPERIENCE[0];
   return (
     <Container
       role={data.ROLE}

@@ -3,7 +3,7 @@ import { Container } from "./commons";
 
 export const Internship = () => {
   const { EXPERIENCE } = Homepage;
-  const data = EXPERIENCE[0];
+  const data = EXPERIENCE[1];
   return (
     <Container
       role={data.ROLE}
