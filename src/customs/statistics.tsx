@@ -6,7 +6,7 @@ export const Statistics = () => {
   const { YOE, PROJECTS, LEETCODE, ACHIEVEMENT } = STATISTICS;
   return (
     <div className="flex mx-4 md:mx-0 justify-center items-center flex-wrap md:flex-nowrap gap-[10px] md:gap-[50px]">
-      <StatItem number={YOE as number} text="Years Of Experience" />
+      <StatItem number={YOE} text="Years Of Experience" />
       <StatItem number={PROJECTS.PROFESSIONAL} text="Projects" />
       <StatItem number={LEETCODE} text="Leetcode Problems" />
       <StatItem number={1} text={ACHIEVEMENT} />

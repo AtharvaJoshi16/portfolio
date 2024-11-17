@@ -3,7 +3,7 @@ const getYOE = () => {
   const startDate = moment("12/1/2022"); //joining date
   const today = moment();
   const diff = today.diff(startDate, "years", true);
-  return diff.toFixed(1);
+  return parseFloat(diff.toFixed(1));
 };
 export const Homepage = {
   NAME: "Atharva",
