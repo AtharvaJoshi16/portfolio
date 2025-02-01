@@ -64,10 +64,19 @@ export const Homepage = {
   },
   EXPERIENCE: [
     {
+      ROLE: "Software Engineer",
+      SUB_ROLE: "Custom Software Engineering Analyst (Promotion)",
+      ORG: "Accenture Solutions Pvt. Ltd.",
+      SPAN: "Dec 2024 - Present",
+      LOC: "Pune, Maharashtra",
+      DESCRIPTION:
+        "Collaborated in the development of private UI libraries as well as web applications according to client requirements in the form of user stories as well as defects and change requests.",
+    },
+    {
       ROLE: "Associate Software Engineer",
       SUB_ROLE: "Custom Software Engineering Associate",
       ORG: "Accenture Solutions Pvt. Ltd.",
-      SPAN: "Dec 2022 - Present",
+      SPAN: "Dec 2022 - Nov 2024",
       LOC: "Pune, Maharashtra",
       DESCRIPTION:
         "Collaborated in the development of private UI libraries as well as web applications according to client requirements in the form of user stories as well as defects and change requests.",
