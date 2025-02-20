@@ -1,8 +1,8 @@
 import moment from "moment";
 const getYOE = () => {
-  const startDate = moment("12/1/2022"); //joining date
+  const startDate = moment("09/01/2021"); //joining date
   const today = moment();
-  const diff = today.diff(startDate, "years", true);
+  const diff = today.diff(startDate, "months") / 12;
   return parseFloat(diff.toFixed(1));
 };
 export const Homepage = {
@@ -29,7 +29,7 @@ export const Homepage = {
   STATISTICS: {
     YOE: getYOE(),
     PROJECTS: {
-      PROFESSIONAL: 2,
+      PROFESSIONAL: 3,
       PERSONAL: "5+",
     },
     LEETCODE: 40,
