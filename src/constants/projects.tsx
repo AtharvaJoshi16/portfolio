@@ -17,17 +17,15 @@ import {
   Sass,
   Shadcn,
   Springboot,
-  Turbo,
   Tw,
-  Uberall,
 } from "@/icons";
 import Image from "next/image";
 
 export const projects: ProjectCardProps[] = [
   {
-    title: "Supermarket Web Application",
-    role: "Junior React Developer",
-    duration: "April 2023 - Feb 2024",
+    title: "Accenture Internal",
+    role: "React Developer",
+    duration: "April 2023 - July 2023",
     technologies: [
       {
         title: "Next.js",
@@ -53,55 +51,48 @@ export const projects: ProjectCardProps[] = [
         title: "Algolia",
         icon: <Algolia height="36" width="100" />,
       },
-      {
-        title: "Uberall",
-        icon: <Uberall height="36" width="100" />,
-      },
     ],
     description: [
-      "Collaborated in the development of a web application for client that provides customers with latest offers on various products such as groceries, electronics and daily needs and adding the items to cart for the purchase.",
-      "Developed a custom npm component library in client’s private registry using React.js and Sass with Storybook as the design system.",
-      "Developed a website using Next.js Pages router format along with components from the custom library developed.",
-      "Integrated the website with Magnolia CMS APIs as backend, Algolia Search API for search queries and filter functionalities and Uberall API for client’s store locator.",
-      "Worked on Unit Test Case development using Jest and React Testing Library to ensure code coverage as per requirements.",
+      "Worked as a Development Lead, managing a small frontend team of entry level associates, along with working on core features for an experimental E-commerce project that handles purchase, offers management and listing of products for employee reward points, using Next.js for website, Material-UI and Storybook for UI library along with Magnolia CMS Integration.",
+      "Performed code reviews, merging of pull requests and deployment on multiple environments.",
     ],
   },
   {
-    title: "Rail Freight Services Web Application",
-    role: "React Developer",
-    duration: "March 2024 - Present",
+    title: "B2B Banking Application",
+    role: "Backend Developer",
+    duration: "August 2023 - February 2024",
     technologies: [
       {
-        title: "Next.js",
-        icon: <Next height="36" width="36" />,
+        title: "Java",
+        icon: <Java height="36" width="36" />,
       },
       {
-        title: "React.js",
-        icon: <React height="36" width="36" />,
-      },
-      {
-        title: "Material UI",
-        icon: <Mui height="36" width="36" />,
-      },
-      {
-        title: "Redux Toolkit",
-        icon: <Redux height="36" width="36" />,
-      },
-      {
-        title: "Jest",
-        icon: <Jest height="36" width="36" />,
-      },
-      {
-        title: "Turborepo",
-        icon: <Turbo height="36" width="100" />,
+        title: "Springboot",
+        icon: <Springboot height="36" width="36" />,
       },
     ],
     description: [
-      "Collaborated in the development of a web application for client that enables user, either individual or corporate, in booking of various containers, such as truck, fleet or railway containers for transfer of logistics throughout the country. The application further helps the user to prebook, cancel or track the booked services as the needs.",
-      "Developed a custom npm component library in client’s private registry using React.js and Material UI with Storybook as the design system.",
-      "Developed a website using Monorepo project structure, Next.js App router format, Redux Toolkit along with components from the custom library developed.",
-      "Integrated the website with client ready APIs for all the services offered by client.",
-      "Worked on Unit Test Case development using Jest and React Testing Library to ensure code coverage as per requirements.",
+      "Contributed to API development of a logistics freight booking application that handles customer container bookings for transportation through rail, fleet and trucks using Springboot, Java and Amazon RDS database along with test case development with a maintained code coverage of 80%.",
+      "Performed and managed API deployments for multiple environments for pull requests along with debugging build pipelines for pull requests that includes SonarQube issues and Checkmarx vulnerability scanning.",
+    ],
+  },
+  {
+    title: "Rail Freight Services Application",
+    role: "Backend Developer",
+    duration: "March 2024 - Present",
+    technologies: [
+      {
+        title: "Java",
+        icon: <Java height="36" width="36" />,
+      },
+      {
+        title: "Springboot",
+        icon: <Springboot height="36" width="36" />,
+      },
+    ],
+    description: [
+      "Contributed to API development of a logistics freight booking application that handles customer container bookings for transportation through rail, fleet and trucks using Springboot, Java and Amazon RDS database along with test case development with a maintained code coverage of 80%.",
+      "Performed and managed API deployments for multiple environments for pull requests along with debugging build pipelines for pull requests that includes SonarQube issues and Checkmarx vulnerability scanning.",
     ],
   },
 ];
