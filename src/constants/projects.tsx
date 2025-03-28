@@ -109,7 +109,7 @@ export const projects: ProjectCardProps[] = [
 export const personalProjects: ProjectCardProps[] = [
   {
     title: "Flow Nodes",
-    link: "https://develop.d4xajhu5z1ils.amplifyapp.com/canvas",
+    link: "https://develop.d670md76xyxrb.amplifyapp.com/canvas",
     repos: { fe: "https://github.com/AtharvaJoshi16/flow-nodes" },
     description: [
       "A web application that enables user to create roadmaps and schemas using drag and drop options",
