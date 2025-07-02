@@ -2,7 +2,7 @@ export const StatItem = ({
   number,
   text,
 }: {
-  number: number;
+  number: number | string;
   text: string;
 }) => {
   return (

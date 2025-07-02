@@ -1,4 +1,3 @@
-import mern from "@/assets/mern.png";
 import { Description } from "@/customs/personal-project-card/description";
 import { Footer } from "@/customs/personal-project-card/footer";
 import { Title } from "@/customs/personal-project-card/title";
@@ -21,13 +20,32 @@ import {
   Tw,
   Uberall,
 } from "@/icons";
-import Image from "next/image";
 
 export const projects: ProjectCardProps[] = [
   {
-    title: "Supermarket Web Application",
+    title: "B2B Banking Operations Platform Development",
+    role: "Junior Backend Developer",
+    duration: "Feb 2023 - September 2023",
+    technologies: [
+      {
+        title: "Java",
+        icon: <Java height="36" width="36" />,
+      },
+      {
+        title: "Springboot",
+        icon: <Springboot height="36" width="36" />,
+      },
+    ],
+    description: [
+      "Collaborated in the development of one of the many microservices for a B2B banking platform that handles customer subscriptions, assets, along with roles and permissions, performing advanced CRUD operations on multiple modules such as subscriptions and roles using Springboot, Java, JPA and client’s third party API integration.",
+      "Performed deployments for various environments along with pipeline debugging for vulnerabilities and SonarQube issues.",
+      "Maintained 80% of code coverage for the application using JUnit along with API documentation using Swagger.",
+    ],
+  },
+  {
+    title: "CMS Website for Major German Supermarket Chain",
     role: "Junior React Developer",
-    duration: "April 2023 - Feb 2024",
+    duration: "October 2023 - Feb 2024",
     technologies: [
       {
         title: "Next.js",
@@ -108,6 +126,30 @@ export const projects: ProjectCardProps[] = [
 
 export const personalProjects: ProjectCardProps[] = [
   {
+    title: "Rentbandhu",
+    link: "https://rentbandhu.atharvajoshi.dev",
+    repos: {
+      be: "https://github.com/AtharvaJoshi16/rms-api",
+      fe: "https://github.com/AtharvaJoshi16/rms-app",
+    },
+    description: [
+      "Developed a full stack application that enables users to search properties, host a property and rent a property.",
+      "Developed using Next.js, Shadcn UI, Redux and React Hook Form for frontend and Springboot, Java for backend along with AWS S3 storage, EC2, and RDS MySQL Database.",
+    ],
+    technologies: [],
+  },
+  {
+    title: "Easylib UI",
+    link: "https://easylib-ui.atharvajoshi.dev",
+    repos: {
+      fe: "https://github.com/AtharvaJoshi16/easylib-ui",
+    },
+    description: [
+      "Developed a custom component library as an npm package @aj.dev/easylib-ui that follows Atomic Design Principles using React.js, Storybook, Vite, TailwindCSS and Typescript.",
+    ],
+    technologies: [],
+  },
+  {
     title: "Flow Nodes",
     link: "https://develop.d2v373g4q5ir6f.amplifyapp.com/canvas",
     repos: { fe: "https://github.com/AtharvaJoshi16/flow-nodes" },
@@ -122,25 +164,6 @@ export const personalProjects: ProjectCardProps[] = [
       { title: "React Toolkit", icon: <Redux width={30} height={30} /> },
       { title: "Shadcn", icon: <Shadcn width={30} height={30} /> },
       { title: "TailwindCSS", icon: <Tw width={30} height={30} /> },
-    ],
-  },
-  {
-    title: "Job Finder App",
-    repos: {
-      fe: "https://github.com/AtharvaJoshi16/job-portal-fe",
-      be: "https://github.com/AtharvaJoshi16/job-portal-be",
-    },
-    description: [
-      "Developed a fullstack application using MERN Stack that enables an employee to find a relevant job and an employer to post jobs as per requirements.",
-      "Developed using Typescript, React.js, Material UI, Shadcn-UI as frontend and Express.js, MongoDB as backend.",
-    ],
-    technologies: [
-      {
-        title: "MERN Stack",
-        icon: <Image src={mern} alt="mern-logo" width={120} height={30} />,
-      },
-      { title: "Material UI", icon: <Mui width="30" height="30" /> },
-      { title: "Shadcn", icon: <Shadcn width="30" height="30" /> },
     ],
   },
   {

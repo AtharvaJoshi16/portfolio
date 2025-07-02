@@ -30,7 +30,7 @@ export const IntroData = () => {
         <AvatarImage
           onLoad={() => setLoading(false)}
           className="block object-cover bg-black"
-          src="https://firebasestorage.googleapis.com/v0/b/portfolio-1f6e3.appspot.com/o/IMG_20240922_090717.jpg?alt=media&token=d77f6aad-f9ce-4561-885c-928964792fdf"
+          src="https://firebasestorage.googleapis.com/v0/b/portfolio-1f6e3.appspot.com/o/Profile_pic.png?alt=media&token=53b631ad-5ad6-4c9f-9e21-8f3ab7196cc5"
           alt="profile-pic"
         />
         <AvatarFallback className="text-7xl font-extrabold text-indigo-100 tracking-wide">

@@ -7,9 +7,8 @@ import {
   Java,
   JiraLight,
   Js,
+  Mysql,
   Next,
-  Postgresql,
-  Python5,
   React,
   Redux,
   Sass,
@@ -73,17 +72,12 @@ export const skills = {
     {
       title: "Java",
       icon: <Java className={commonClasses} />,
-      badge: <BadgeText text="I" />,
-    },
-    {
-      title: "PostgreSQL",
-      icon: <Postgresql className={commonClasses} />,
-      badge: <BadgeText text="I" />,
-    },
-    {
-      title: "Python",
-      icon: <Python5 className={commonClasses} />,
       badge: <BadgeText text="II" />,
+    },
+    {
+      title: "MySQL",
+      icon: <Mysql className={commonClasses} />,
+      badge: <BadgeText text="I" />,
     },
   ],
   tools: [

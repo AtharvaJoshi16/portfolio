@@ -7,7 +7,7 @@ const getYOE = () => {
 };
 export const Homepage = {
   NAME: "Atharva",
-  ROLE: "Software Developer",
+  ROLE: "Software Engineer",
   TYPEWRITER_WORDS: [
     {
       className: "text-slate-50",
@@ -23,17 +23,18 @@ export const Homepage = {
     },
   ],
   DESCRIPTION:
-    "I excel as a Frontend Developer, building pixel perfect UI using React. I have engrossed myself in the React ecosystem since 2020, and have been actively upgrading myself with the latest updates. I also have knowledge of API development using Express or Java Springboot. I'm actively seeking Frontend or Full Stack Developer roles.",
+    // "I excel as a Frontend Developer, building pixel perfect UI using React. I have engrossed myself in the React ecosystem since 2020, and have been actively upgrading myself with the latest updates. I also have knowledge of API development using Express or Java Springboot. I'm actively seeking Frontend or Full Stack Developer roles.",
+    "I excel as a Full Stack Developer with a Computer Science degree and over 3 years of hands-on experience (including internship). I specialize in crafting clean, responsive and pixel perfect UIs with React.js and building robust backend systems using Java/Node.js.  I'm currently seeking Frontend, Backend or Fullstack Developer roles where I can contribute to building impactful digital products.",
   RESUME_LINK:
-    "https://firebasestorage.googleapis.com/v0/b/portfolio-1f6e3.appspot.com/o/AtharvaResumeMar8.pdf?alt=media&token=26033051-0a39-454a-9c6a-eb8da07f5aa4",
+    "https://firebasestorage.googleapis.com/v0/b/portfolio-1f6e3.appspot.com/o/ResumePortfolio.pdf?alt=media&token=1c951245-7b6d-40f9-b9f5-0f9b1f18a3f1",
   STATISTICS: {
     YOE: getYOE(),
     PROJECTS: {
       PROFESSIONAL: 3,
       PERSONAL: "5+",
     },
-    LEETCODE: 40,
-    ACHIEVEMENT: "iChamp Winner at Accenture",
+    LEETCODE: "60+",
+    ACHIEVEMENT: "ACE Award Winner at Accenture",
   },
   EDUCATION: {
     SSC: {
@@ -93,7 +94,7 @@ export const Homepage = {
   ABOUT_ME: {
     header: "Hands dirty in every new tech",
     description: [
-      "As a Frontend Developer, I build pixel perfect UIs using React and corresponding frameworks. I have been into React development since early 2020 and have been constantly upgrading myself since then.",
+      "As a Full Stack Developer, I build pixel perfect UIs using React and corresponding frameworks and power them with good backends using Java. I have been into React development since early 2020 and have been constantly upgrading myself since then.",
       "I aim to place myself at an expert level and generate content to help other developers excel in this field.",
     ],
   },
