@@ -201,6 +201,23 @@ export const personalProjects: ProjectCardProps[] = [
     ],
   },
   {
+    title: "Ecommerce API",
+    repos: { be: "https://github.com/AtharvaJoshi16/ecomm-microservices" },
+    link: "/",
+    description: [
+      "Developed multiple Spring Boot microservices including products, orders, auth, and cart, using Spring Cloud Gateway and Eureka for service discovery and routing.",
+      "Implemented Redis caching, dockerized all services, integrated MySQL and AWS S3 bucket for persistence and media storage, and used OpenFeign for inter-service communication.",
+    ],
+    technologies: [
+      {
+        title: "Java",
+        icon: <Java width="30" height="30" />,
+      },
+      { title: "Springboot", icon: <Springboot width="30" height="30" /> },
+      { title: "MySQL", icon: <Mysql width="30" height="30" /> },
+    ],
+  },
+  {
     title: "Portfolio (This website)",
     repos: { fe: "https://github.com/AtharvaJoshi16/portfolio" },
     link: "/",
