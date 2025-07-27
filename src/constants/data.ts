@@ -26,7 +26,7 @@ export const Homepage = {
     // "I excel as a Frontend Developer, building pixel perfect UI using React. I have engrossed myself in the React ecosystem since 2020, and have been actively upgrading myself with the latest updates. I also have knowledge of API development using Express or Java Springboot. I'm actively seeking Frontend or Full Stack Developer roles.",
     "I excel as a Full Stack Developer with a degree in Information Technology and over 3 years of hands-on experience. I specialize in crafting clean, responsive and pixel perfect UIs with React.js and building robust backend systems using Java/Node.js.  I'm currently seeking Frontend, Backend or Fullstack Developer roles where I can contribute to building impactful digital products.",
   RESUME_LINK:
-    "https://firebasestorage.googleapis.com/v0/b/portfolio-1f6e3.appspot.com/o/AtharvaResumeJun27_25.pdf?alt=media&token=776e1130-d8b4-471b-ba1d-8b7fe08ed96d",
+    "https://firebasestorage.googleapis.com/v0/b/portfolio-1f6e3.appspot.com/o/Atharva_ResumeJun27_25.pdf?alt=media&token=4e55e57e-0e40-419e-8d70-f48b017e430c",
   STATISTICS: {
     YOE: getYOE(),
     PROJECTS: {

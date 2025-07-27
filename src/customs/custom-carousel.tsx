@@ -46,7 +46,7 @@ export const CustomCarousel = ({
             {item}
           </CarouselItem>
         ))}
-      </CarouselContent>
+    </CarouselContent>
       <Previous />
       <Next />
     </Carousel>
