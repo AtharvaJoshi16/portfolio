@@ -10,8 +10,8 @@ export const BadgeElementsCard = () => {
   return (
     <Card className="border border-indigo-900 absolute right-10 z-50 w-[200px]">
       <div className="flex flex-col gap-3 text-sm">
-        {levels.map((level) => (
-          <BadgeElementsCardItem>
+        {levels.map((level, key) => (
+          <BadgeElementsCardItem key={key}>
             <BadgeText bold text={level.title} />
             <BadgeText bold text={level.roman} />
           </BadgeElementsCardItem>

@@ -21,20 +21,20 @@ export default function ProjectsPage() {
         <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-indigo-300">
           Projects
         </h3>
-        {[1, 2].map(() => (
-          <Fire />
+        {[1, 2].map((idx) => (
+          <Fire key={idx} />
         ))}
       </div>
-      {projects.map((project) => (
-        <ProjectCard {...project} />
+      {projects.map((project, idx) => (
+        <ProjectCard {...project} key={`${project.title}-${idx}`} />
       ))}
       <div className="mt-8">
         <div className="flex items-center gap-4">
           <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-indigo-300">
             Personal Projects
           </h3>
-          {[1, 2].map(() => (
-            <Fire />
+          {[1, 2].map((idx) => (
+            <Fire key={idx} />
           ))}
         </div>
         <HoverEffect items={hoverCardItems} />

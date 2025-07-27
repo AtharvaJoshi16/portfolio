@@ -38,8 +38,11 @@ export const ProjectCard = ({
           {role}
         </h3>
         <ul className="flex flex-col gap-2 px-2 md:px-10">
-          {description.map((des) => (
-            <li className="text-slate-50 text-sm md:text-base text-justify">
+          {description.map((des, idx) => (
+            <li
+              className="text-slate-50 text-sm md:text-base text-justify"
+              key={idx}
+            >
               {des}
             </li>
           ))}

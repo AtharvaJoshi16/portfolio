@@ -16,8 +16,8 @@ export const Buttons = () => {
         />
       </Link>
       <div className="flex items-center gap-5">
-        {smLinks.map((item) => (
-          <Link href={item.href} target="_blank">
+        {smLinks.map((item, idx) => (
+          <Link href={item.href} target="_blank" key={`${item.name}-${idx}`}>
             <GradientButton icon={item.icon} title={item.name} />
           </Link>
         ))}

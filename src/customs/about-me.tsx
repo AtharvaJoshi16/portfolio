@@ -40,8 +40,11 @@ export const AboutMe = () => {
         <h3 className="text-lg md:text-2xl font-bold text-indigo-300">
           About Me 😃
         </h3>
-        {description.map((item) => (
-          <h3 className="text-justify text-sm md:text-base text-slate-100">
+        {description.map((item, idx) => (
+          <h3
+            className="text-justify text-sm md:text-base text-slate-100"
+            key={idx}
+          >
             {item}
           </h3>
         ))}

@@ -1,4 +1,4 @@
-import GoogleAnalytics from "@/customs/google-analytics";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { ClientLayout } from "./clientLayout";
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Suspense fallback={null}>
-          <GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID!} />
+          <GoogleAnalytics gaId={process.env.GA_MEASUREMENT_ID!} />
         </Suspense>
       </head>
       <body
