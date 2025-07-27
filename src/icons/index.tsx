@@ -1,4 +1,5 @@
 export { default as Algolia } from "./Algolia";
+export { default as AwsLogo } from "./AwsLogo";
 export { default as AzureDevops } from "./AzureDevops";
 export { default as ConfluenceLight } from "./ConfluenceLight";
 export { default as Confluence } from "./Confluence";

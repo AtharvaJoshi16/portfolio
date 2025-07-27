@@ -1,5 +1,6 @@
 import { BadgeText } from "@/customs/badge-text";
 import {
+  AwsLogo,
   AzureDevops,
   ConfluenceLight,
   Css,
@@ -13,6 +14,7 @@ import {
   Redux,
   Sass,
   Sb,
+  Springboot,
   Ts,
   Tw,
 } from "@/icons";
@@ -57,6 +59,11 @@ export const skills = {
       icon: <Sass className={commonClasses} />,
       badge: <BadgeText text="III" />,
     },
+    {
+      title: "Springboot",
+      icon: <Springboot className={commonClasses} />,
+      badge: <BadgeText text="III" />,
+    },
   ],
   languages: [
     {
@@ -92,6 +99,10 @@ export const skills = {
     {
       title: "Azure Devops",
       icon: <AzureDevops className={commonClasses} />,
+    },
+    {
+      title: "AWS",
+      icon: <AwsLogo className={commonClasses} />,
     },
     {
       title: "Git",
