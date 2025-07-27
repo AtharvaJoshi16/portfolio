@@ -140,7 +140,7 @@ export const personalProjects: ProjectCardProps[] = [
   },
   {
     title: "Easylib UI",
-    link: "https://easylib-ui.atharvajoshi.dev",
+    link: "https://easylibui.atharvajoshi.dev",
     repos: {
       fe: "https://github.com/AtharvaJoshi16/easylib-ui",
     },
@@ -203,7 +203,6 @@ export const personalProjects: ProjectCardProps[] = [
   {
     title: "Ecommerce API",
     repos: { be: "https://github.com/AtharvaJoshi16/ecomm-microservices" },
-    link: "/",
     description: [
       "Developed multiple Spring Boot microservices including products, orders, auth, and cart, using Spring Cloud Gateway and Eureka for service discovery and routing.",
       "Implemented Redis caching, dockerized all services, integrated MySQL and AWS S3 bucket for persistence and media storage.",
