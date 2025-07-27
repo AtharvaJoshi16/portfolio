@@ -206,7 +206,7 @@ export const personalProjects: ProjectCardProps[] = [
     link: "/",
     description: [
       "Developed multiple Spring Boot microservices including products, orders, auth, and cart, using Spring Cloud Gateway and Eureka for service discovery and routing.",
-      "Implemented Redis caching, dockerized all services, integrated MySQL and AWS S3 bucket for persistence and media storage, and used OpenFeign for inter-service communication.",
+      "Implemented Redis caching, dockerized all services, integrated MySQL and AWS S3 bucket for persistence and media storage.",
     ],
     technologies: [
       {

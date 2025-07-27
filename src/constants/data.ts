@@ -24,17 +24,17 @@ export const Homepage = {
   ],
   DESCRIPTION:
     // "I excel as a Frontend Developer, building pixel perfect UI using React. I have engrossed myself in the React ecosystem since 2020, and have been actively upgrading myself with the latest updates. I also have knowledge of API development using Express or Java Springboot. I'm actively seeking Frontend or Full Stack Developer roles.",
-    "I excel as a Full Stack Developer with a Computer Science degree and over 3 years of hands-on experience (including internship). I specialize in crafting clean, responsive and pixel perfect UIs with React.js and building robust backend systems using Java/Node.js.  I'm currently seeking Frontend, Backend or Fullstack Developer roles where I can contribute to building impactful digital products.",
+    "I excel as a Full Stack Developer with a degree in Information Technology and over 3 years of hands-on experience. I specialize in crafting clean, responsive and pixel perfect UIs with React.js and building robust backend systems using Java/Node.js.  I'm currently seeking Frontend, Backend or Fullstack Developer roles where I can contribute to building impactful digital products.",
   RESUME_LINK:
-    "https://firebasestorage.googleapis.com/v0/b/portfolio-1f6e3.appspot.com/o/resume_og.pdf?alt=media&token=9afb2f63-fca9-493b-8a1f-51b3b123b52a",
+    "https://firebasestorage.googleapis.com/v0/b/portfolio-1f6e3.appspot.com/o/AtharvaResumeJun27_25.pdf?alt=media&token=776e1130-d8b4-471b-ba1d-8b7fe08ed96d",
   STATISTICS: {
     YOE: getYOE(),
     PROJECTS: {
       PROFESSIONAL: 3,
       PERSONAL: "5+",
     },
-    LEETCODE: "60+",
-    ACHIEVEMENT: "ACE Award Winner at Accenture",
+    LEETCODE: "70+",
+    ACHIEVEMENT: "Awards at Accenture",
   },
   EDUCATION: {
     SSC: {
