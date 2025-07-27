@@ -240,5 +240,11 @@ export const hoverCardItems = personalProjects.map((project) => ({
   title: <Title title={project.title} link={project.link} />,
   description: <Description description={project.description} />,
   link: project.link,
-  footer: <Footer repos={project.repos} technologies={project.technologies} />,
+  footer: (
+    <Footer
+      title={project.title}
+      repos={project.repos}
+      technologies={project.technologies}
+    />
+  ),
 }));

@@ -1,5 +1,7 @@
+"use client";
 import { Homepage } from "@/constants/data";
 import { smLinks } from "@/constants/sm-links";
+import { sendEvent } from "@/lib/analytics";
 import { IconDownload } from "@tabler/icons-react";
 import Link from "next/link";
 import { GradientButton } from "./gradient-button";
@@ -13,12 +15,27 @@ export const Buttons = () => {
           className="w-full md:w-fit"
           text="DOWNLOAD RESUME"
           icon={<IconDownload />}
+          onClick={() => {
+            sendEvent({
+              action: "resume_download",
+              label: "Downloaded Resume",
+            });
+          }}
         />
       </Link>
       <div className="flex items-center gap-5">
         {smLinks.map((item, idx) => (
           <Link href={item.href} target="_blank" key={`${item.name}-${idx}`}>
-            <GradientButton icon={item.icon} title={item.name} />
+            <GradientButton
+              icon={item.icon}
+              title={item.name}
+              onClick={() => {
+                sendEvent({
+                  action: "sm_links_click",
+                  label: `Clicked ${item.name}`,
+                });
+              }}
+            />
           </Link>
         ))}
       </div>

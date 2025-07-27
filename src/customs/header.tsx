@@ -1,6 +1,7 @@
 "use client";
 import { contacts } from "@/constants/contact";
 import { useToast } from "@/hooks/use-toast";
+import { sendEvent } from "@/lib/analytics";
 import { copyText } from "@/lib/copyText";
 import { IconClipboardCheck, IconCopy } from "@tabler/icons-react";
 import { Homepage } from "../constants/data";
@@ -32,6 +33,10 @@ export const Header = () => {
                   </div>
                 ),
               });
+              sendEvent({
+                action: "email_copy",
+                label: "Copied email",
+              });
             }}
             title={contacts.email}
             text={contacts.email}
@@ -54,6 +59,10 @@ export const Header = () => {
                     <h3 className="font-semibold">Phone copied to clipboard</h3>
                   </div>
                 ),
+              });
+              sendEvent({
+                action: "phone_copy",
+                label: "Copied Phone number",
               });
             }}
             text={contacts.phone}

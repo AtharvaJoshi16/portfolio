@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { sendEvent } from "@/lib/analytics";
 import { IconLink } from "@tabler/icons-react";
 import Link from "next/link";
 
@@ -9,6 +10,12 @@ export const Title = ({ title, link }: { title: string; link?: string }) => {
         <Button
           variant="link"
           className="text-indigo-300 font-semibold text-base p-0"
+          onClick={() => {
+            sendEvent({
+              action: "project_link_click",
+              label: `Clicked project link ${title}`,
+            });
+          }}
         >
           {title}
         </Button>

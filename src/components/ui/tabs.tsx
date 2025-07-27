@@ -1,5 +1,6 @@
 "use client";
 
+import { sendEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
@@ -54,6 +55,10 @@ export const Tabs = ({
             onClick={() => {
               onTabSelect?.(tab);
               moveSelectedTabToTop(idx);
+              sendEvent({
+                action: "career_tab_switch",
+                label: `Switched to tab ${tab.title}`,
+              });
             }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}

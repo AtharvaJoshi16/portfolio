@@ -65,8 +65,10 @@ export const achAndCertData = [...achievements, ...certifications].map(
     footer: (
       <RepoLink
         text={item.linkTitle}
+        title={item.title}
         link={item.link}
         icon={<IconPaperclip width={18} />}
+        action="certificate_link_click"
       />
     ),
   })
