@@ -4,6 +4,7 @@ import {
   IconHome,
   IconSquareRoundedLetterAFilled,
 } from "@tabler/icons-react";
+import { Cog } from "lucide-react";
 
 export const links = [
   {
@@ -30,5 +31,10 @@ export const links = [
     title: "About me",
     icon: <IconSquareRoundedLetterAFilled />,
     href: "/about-me",
+  },
+  {
+    title: "Admin only",
+    icon: <Cog />,
+    href: "/admin/upload",
   },
 ];

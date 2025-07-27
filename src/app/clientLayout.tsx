@@ -4,8 +4,10 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 import { Toaster } from "@/components/ui/toaster";
 import { links } from "@/constants/navlinks";
 import { Footer } from "@/customs/footer";
+import { usePathname } from "next/navigation";
 
 export const ClientLayout = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname();
   return (
     <>
       <FloatingDock
@@ -15,7 +17,7 @@ export const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       />
       <Toaster />
       {children}
-      <Footer />
+      {!pathname.match(/admin\/upload/i) && <Footer />}
     </>
   );
 };
