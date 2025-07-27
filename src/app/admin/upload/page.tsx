@@ -22,6 +22,11 @@ export default function AdminUploadPage() {
             </Button>
           </div>
         </form>
+        <div className="mt-5">
+          <form>
+            <Input type="file" className="text-white file:text-white" />
+          </form>
+        </div>
       </div>
     </Card>
   );
