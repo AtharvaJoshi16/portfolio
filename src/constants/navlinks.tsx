@@ -33,7 +33,7 @@ export const links = [
     href: "/about-me",
   },
   {
-    title: "Admin only",
+    title: "Admin",
     icon: <Cog />,
     href: "/admin/upload",
   },
