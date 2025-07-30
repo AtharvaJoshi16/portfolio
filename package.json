@@ -16,7 +16,7 @@
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.1",
-    "@tabler/icons-react": "^3.17.0",
+    "@tabler/icons-react": "^3.34.1",
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.5.0",
@@ -29,11 +29,13 @@
     "lucide-react": "^0.447.0",
     "mini-svg-data-uri": "^1.4.4",
     "moment": "^2.30.1",
+    "motion": "^12.23.11",
     "next": "^15.4.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-dropzone": "^14.3.8",
     "react-hook-form": "^7.61.1",
-    "tailwind-merge": "^2.5.2",
+    "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {

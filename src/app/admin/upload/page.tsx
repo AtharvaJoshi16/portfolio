@@ -1,10 +1,11 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { FileUpload } from "@/components/ui/file-upload";
+import { Button, Button as GradientButton } from "@/customs/button";
 import { Card } from "@/customs/card";
 import { Textfield } from "@/customs/textfield";
 import axios from "axios";
-import { CheckCircle, Eye, EyeOff, Loader2 } from "lucide-react";
+import classNames from "classnames";
+import { CheckCircle, Eye, EyeOff, Loader2, Upload } from "lucide-react";
 import { useState } from "react";
 
 export default function AdminUploadPage() {
@@ -14,6 +15,9 @@ export default function AdminUploadPage() {
   const [isVerified, setIsVerified] = useState(false);
   const [verifyDisabled, setVerifyDisabled] = useState(true);
   const [verifyLoading, setVerifyLoading] = useState(false);
+  const [uploaded, setUploaded] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [file, setFile] = useState<File>();
   const handleAccessKeyValueChange = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -44,6 +48,23 @@ export default function AdminUploadPage() {
     }
   };
 
+  const handleUpload = async () => {
+    setUploading(true);
+    const formData = new FormData();
+    formData.append("resume", file as Blob);
+    try {
+      const res = await axios.post("/api/upload-resume", formData);
+      if (res.status === 204) {
+        setUploaded(true);
+      }
+    } catch (e) {
+      console.log(e);
+      setUploaded(false);
+    } finally {
+      setUploading(false);
+    }
+  };
+
   return (
     <Card className="max-w-[800px] mx-auto">
       <h1 className="text-indigo-300 font-bold text-2xl">Update data</h1>
@@ -60,28 +81,30 @@ export default function AdminUploadPage() {
               inputType === "password" ? (
                 <EyeOff
                   onClick={() => setInputType("text")}
-                  className="text-slate-300"
+                  className={classNames("text-slate-300", {
+                    "pointer-events-none opacity-60": isVerified,
+                  })}
                 />
               ) : (
                 <Eye
                   onClick={() => setInputType("password")}
-                  className="text-slate-300"
+                  className={classNames("text-slate-300", {
+                    "pointer-events-none opacity-60": isVerified,
+                  })}
                 />
               )
             }
           />
           {isVerified ? (
-            <Button
-              variant="ghost"
+            <GradientButton
               disabled
-              className="flex items-center gap-2 text-white font-bold"
+              className="flex items-center gap-2 text-white font-bold w-fit"
             >
-              <CheckCircle className="text-green-500" />
-              Verified
-            </Button>
+              <CheckCircle className="text-green-400" />
+              VERIFIED
+            </GradientButton>
           ) : (
-            <Button
-              variant="secondary"
+            <GradientButton
               className="font-semibold text-indigo-100 flex items-center gap-2"
               disabled={verifyDisabled || verifyLoading}
               onClick={handleVerification}
@@ -89,17 +112,49 @@ export default function AdminUploadPage() {
               {verifyLoading ? (
                 <>
                   <Loader2 className="animate-spin" />
-                  Verifying
+                  VERIFYING
                 </>
               ) : (
-                "Verify"
+                "VERIFY"
               )}
-            </Button>
+            </GradientButton>
           )}
         </div>
         {isVerified && (
-          <div className="mt-5">
-            <Input type="file" className="text-white file:text-white" />
+          <div className="mt-5 flex flex-col items-center gap-2">
+            <FileUpload
+              label="Upload your resume"
+              description="Drop your resume here or click to choose"
+              onChange={(files) => setFile(files[0])}
+            />
+            {uploaded ? (
+              <Button
+                className="flex items-center gap-2"
+                disabled
+                onClick={handleUpload}
+              >
+                <CheckCircle size={20} />
+                UPLOADED
+              </Button>
+            ) : (
+              <Button
+                className="flex items-center gap-2"
+                disabled={!file || uploading}
+                onClick={handleUpload}
+              >
+                {uploading ? (
+                  <>
+                    <Loader2 className="animate-spin" />
+                    UPLOADING
+                  </>
+                ) : (
+                  <>
+                    <Upload size={20} />
+                    UPLOAD
+                  </>
+                )}
+              </Button>
+            )}
           </div>
         )}
       </div>
