@@ -64,7 +64,7 @@ export const FileUpload = ({
       <motion.div
         onClick={handleClick}
         whileHover="animate"
-        className="p-10 group/file block rounded-lg cursor-pointer w-full relative overflow-hidden"
+        className="p-2 md:p-10 group/file block rounded-lg cursor-pointer w-full relative overflow-hidden"
       >
         <input
           ref={fileInputRef}
@@ -83,7 +83,10 @@ export const FileUpload = ({
           <div className="relative w-full mt-10 max-w-xl mx-auto">
             {files.length > 0 &&
               files.map((file, idx) => (
-                <div className="flex items-center gap-5" key={idx}>
+                <div
+                  className="flex items-center md:gap-5 flex-col gap-3 md:flex-row"
+                  key={idx}
+                >
                   <motion.div
                     key={"file" + idx}
                     layoutId={idx === 0 ? "file-upload" : "file-upload-" + idx}

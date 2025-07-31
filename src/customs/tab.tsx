@@ -15,7 +15,7 @@ export const Tab = ({
   data: React.ReactNode;
   elementsCard?: React.ReactNode;
 }) => {
-  const { isTablet } = useResponsive();
+  const { isMobile, isTablet } = useResponsive();
   return (
     <div className="w-full relative h-[78vh] md:h-[70vh]">
       <div className="absolute inset-0 h-full w-full transform scale-[0.80] rounded-full blur-3xl" />
@@ -26,7 +26,7 @@ export const Tab = ({
         {!isTablet && elementsCard}
         <div className={`${center ? "m-auto" : ""} w-full`}>{data}</div>
         {/* Meaty part - Meteor effect */}
-        {isActive && <Meteors number={30} />}
+        {isActive && !isMobile && <Meteors number={30} />}
       </div>
     </div>
   );
