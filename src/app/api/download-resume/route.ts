@@ -2,10 +2,6 @@ import axios from "axios";
 import { NextResponse } from "next/server";
 export async function GET() {
   try {
-    console.log(
-      process.env.NEXT_PUBLIC_SERVERLESS_URL,
-      process.env.NEXT_PUBLIC_DOWNLOAD_RESUME_PATH
-    );
     const res = await axios.get(
       `${process.env.NEXT_PUBLIC_SERVERLESS_URL}/${process.env.NEXT_PUBLIC_DOWNLOAD_RESUME_PATH}`
     );
