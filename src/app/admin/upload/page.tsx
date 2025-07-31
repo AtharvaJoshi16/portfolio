@@ -108,12 +108,12 @@ export default function AdminUploadPage() {
           </AlertTitle>
         </Alert>
       )}
-      <Card className="w-[800px] mx-auto">
+      <Card className="w-full md:w-[800px] mx-auto">
         <h1 className="text-indigo-300 font-bold text-2xl text-center">
           Update your resume
         </h1>
         <div className="p-2 mt-5">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-col md:flex-row">
             <Textfield
               type={inputType}
               value={accessKeyValue}
@@ -149,7 +149,7 @@ export default function AdminUploadPage() {
               </GradientButton>
             ) : (
               <GradientButton
-                className="font-semibold text-indigo-100 flex items-center gap-2"
+                className="font-semibold text-indigo-100 flex items-center justify-center gap-2"
                 disabled={verifyDisabled || verifyLoading}
                 onClick={handleVerification}
               >
