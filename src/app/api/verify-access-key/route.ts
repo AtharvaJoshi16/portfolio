@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { accessKey } = body ?? {};
     const res = await axios.post(
-      `${process.env.SERVERLESS_URL}/${process.env.VERIFY_ACCESS_KEY_PATH}`,
+      `${process.env.NEXT_PUBLIC_SERVERLESS_URL}/${process.env.NEXT_PUBLIC_VERIFY_ACCESS_KEY_PATH}`,
       {
         accessKey,
       }

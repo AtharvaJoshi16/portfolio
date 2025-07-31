@@ -2,9 +2,12 @@ import axios from "axios";
 import { NextResponse } from "next/server";
 export async function GET() {
   try {
-    console.log(process.env.SERVERLESS_URL, process.env.DOWNLOAD_RESUME_PATH);
+    console.log(
+      process.env.NEXT_PUBLIC_SERVERLESS_URL,
+      process.env.NEXT_PUBLIC_DOWNLOAD_RESUME_PATH
+    );
     const res = await axios.get(
-      `${process.env.SERVERLESS_URL}/${process.env.DOWNLOAD_RESUME_PATH}`
+      `${process.env.NEXT_PUBLIC_SERVERLESS_URL}/${process.env.NEXT_PUBLIC_DOWNLOAD_RESUME_PATH}`
     );
     return NextResponse.json(res?.data, { status: res?.status });
   } catch (e: any) {

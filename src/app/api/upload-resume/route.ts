@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
       forwardedHeaders[key] = value;
     });
     await axios.post(
-      `${process.env.SERVERLESS_URL}/${process.env.UPLOAD_RESUME_PATH}`,
+      `${process.env.NEXT_PUBLIC_SERVERLESS_URL}/${process.env.NEXT_PUBLIC_UPLOAD_RESUME_PATH}`,
       formData,
       {
         headers: {
