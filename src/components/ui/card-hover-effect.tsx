@@ -1,10 +1,12 @@
 import { cn } from "@/lib/utils";
+import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 import { ReactNode, useState } from "react";
 
 export const HoverEffect = ({
   items,
   className,
+  cardClassName,
 }: {
   items: {
     title: ReactNode;
@@ -13,6 +15,7 @@ export const HoverEffect = ({
     footer: ReactNode;
   }[];
   className?: string;
+  cardClassName?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -20,6 +23,7 @@ export const HoverEffect = ({
     item,
     hovIndex,
     idx,
+    cardClassName,
   }: {
     item: {
       title: ReactNode;
@@ -29,6 +33,7 @@ export const HoverEffect = ({
     };
     hovIndex: number | null;
     idx: number;
+    cardClassName?: string;
   }) => {
     return (
       <>
@@ -49,7 +54,7 @@ export const HoverEffect = ({
             />
           )}
         </AnimatePresence>
-        <Card className="relative">
+        <Card className={clsx("relative", cardClassName)}>
           <CardTitle>{item.title}</CardTitle>
           <CardDescription>{item.description}</CardDescription>
           <CardFooter>{item.footer}</CardFooter>
@@ -72,7 +77,12 @@ export const HoverEffect = ({
           onMouseLeave={() => setHoveredIndex(null)}
           key={idx}
         >
-          <Animator hovIndex={hoveredIndex} idx={idx} item={item} />
+          <Animator
+            hovIndex={hoveredIndex}
+            idx={idx}
+            item={item}
+            cardClassName={cardClassName}
+          />
         </div>
       ))}
     </div>

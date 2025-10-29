@@ -1,3 +1,4 @@
+import { Acn } from "@/icons";
 import moment from "moment";
 const getYOE = () => {
   const startDate = moment("09/01/2021"); //joining date
@@ -66,10 +67,11 @@ export const Homepage = {
   EXPERIENCE: [
     {
       ROLE: "Software Engineer",
-      SUB_ROLE: "Custom Software Engineering Analyst (Promotion)",
+      SUB_ROLE: "Custom Software Engineering Analyst",
       ORG: "Accenture Solutions Pvt. Ltd.",
       SPAN: "Dec 2024 - Present",
       LOC: "Pune, Maharashtra",
+      LOGO: Acn,
       DESCRIPTION:
         "Collaborated in the development of private UI libraries as well as web applications according to client requirements in the form of user stories as well as defects and change requests.",
     },
@@ -79,6 +81,7 @@ export const Homepage = {
       ORG: "Accenture Solutions Pvt. Ltd.",
       SPAN: "Dec 2022 - Nov 2024",
       LOC: "Pune, Maharashtra",
+      LOGO: Acn,
       DESCRIPTION:
         "Collaborated in the development of private UI libraries as well as web applications according to client requirements in the form of user stories as well as defects and change requests.",
     },

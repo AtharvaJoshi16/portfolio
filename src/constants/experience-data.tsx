@@ -4,7 +4,7 @@ import { Internship } from "@/customs/experience/Internship";
 
 export const experienceData: TimelineEntry[] = [
   {
-    title: "Dec 2024 - Present",
+    title: "Dec 2024 - Nov 2025",
     content: <Accenture index={0} />,
   },
   {

@@ -1,12 +1,15 @@
 import { IconMapPin } from "@tabler/icons-react";
+import React from "react";
 
 export const Container = ({
   role,
   org,
+  logo,
   loc,
   subRole,
   description,
 }: {
+  logo?: React.ReactNode;
   role: string;
   org: string;
   loc: string;
@@ -14,7 +17,10 @@ export const Container = ({
   description: string;
 }) => {
   return (
-    <div className="text-slate-50">
+    <div className="text-slate-50 flex gap-2">
+      {React.cloneElement(logo as React.ReactElement, {
+        size: 48,
+      })}
       <div className="flex flex-col gap-2">
         <h3 className="font-semibold text-xl lg:text-3xl">{role}</h3>
         {subRole && (
