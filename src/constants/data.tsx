@@ -1,4 +1,4 @@
-import { Acn } from "@/icons";
+import { Acn, Pfg } from "@/icons";
 import moment from "moment";
 const getYOE = () => {
   const startDate = moment("09/01/2021"); //joining date
@@ -6,6 +6,15 @@ const getYOE = () => {
   const diff = today.diff(startDate, "months") / 12;
   return parseFloat(diff.toFixed(1));
 };
+
+const AcnLogo = () => {
+  return <Acn size={24} className="w-full h-full max-w-25 basis-56" />;
+};
+
+const PGSLogo = () => {
+  return <Pfg size={24} className="w-full h-full max-w-25 basis-56" />;
+};
+
 export const Homepage = {
   NAME: "Atharva",
   ROLE: "Software Engineer",
@@ -67,11 +76,21 @@ export const Homepage = {
   EXPERIENCE: [
     {
       ROLE: "Software Engineer",
+      SUB_ROLE: "Analyst",
+      ORG: "Principal Global Services",
+      SPAN: "Nov 2025 - Present",
+      LOC: "Pune, Maharashtra",
+      LOGO: <PGSLogo />,
+      DESCRIPTION:
+        "Full Stack Developer contributing to React.js, AWS services, Node.js developing software solutions for internal tools.",
+    },
+    {
+      ROLE: "Software Engineer",
       SUB_ROLE: "Custom Software Engineering Analyst",
       ORG: "Accenture Solutions Pvt. Ltd.",
       SPAN: "Dec 2024 - Present",
       LOC: "Pune, Maharashtra",
-      LOGO: Acn,
+      LOGO: <AcnLogo />,
       DESCRIPTION:
         "Collaborated in the development of private UI libraries as well as web applications according to client requirements in the form of user stories as well as defects and change requests.",
     },
@@ -81,7 +100,7 @@ export const Homepage = {
       ORG: "Accenture Solutions Pvt. Ltd.",
       SPAN: "Dec 2022 - Nov 2024",
       LOC: "Pune, Maharashtra",
-      LOGO: Acn,
+      LOGO: <AcnLogo />,
       DESCRIPTION:
         "Collaborated in the development of private UI libraries as well as web applications according to client requirements in the form of user stories as well as defects and change requests.",
     },
@@ -90,6 +109,7 @@ export const Homepage = {
       ORG: "Netlux Systems Pvt. Ltd.",
       SPAN: "Sept 2021 - May 2022",
       LOC: "Pune, Maharashtra",
+      LOGO: <AcnLogo />,
       DESCRIPTION:
         "Studied about Vulnerability Assessment And Penetration Testing and prepared a system architecture for the project. Later, collaborated in the development of the project using technologies such as Python, Linux CLI tools, and React and managed a team of 4 to deliver it.",
     },
