@@ -16,8 +16,8 @@ export const Container = ({
   description: string;
 }) => {
   return (
-    <div className="text-slate-50 flex gap-8">
-      {logo}
+    <div className="text-slate-50 flex gap-4 sm:gap-8">
+      <div className="flex h-fit w-full basis-56">{logo}</div>
       <div className="flex flex-col gap-2">
         <h3 className="font-semibold text-xl lg:text-3xl">{role}</h3>
         {subRole && (

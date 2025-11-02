@@ -1,9 +1,9 @@
 import { Homepage } from "@/constants/data";
 import { Container } from "./commons";
 
-export const Internship = () => {
+export const Internship = ({ index }: { index: number }) => {
   const { EXPERIENCE } = Homepage;
-  const data = EXPERIENCE[2];
+  const data = EXPERIENCE[index];
   return (
     <Container
       role={data.ROLE}

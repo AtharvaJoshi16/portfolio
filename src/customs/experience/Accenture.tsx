@@ -9,7 +9,7 @@ export const Accenture = ({ index }: { index: number }) => {
       role={data.ROLE}
       org={data.ORG}
       loc={data.LOC}
-      logo={data.LOGO as React.ReactNode}
+      logo={data.LOGO}
       // subRole={data.SUB_ROLE}
       description={data.DESCRIPTION}
     />

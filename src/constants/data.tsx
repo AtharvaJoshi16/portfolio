@@ -8,11 +8,11 @@ const getYOE = () => {
 };
 
 const AcnLogo = () => {
-  return <Acn size={24} className="w-full h-full max-w-25 basis-56" />;
+  return <Acn size={24} className="w-full h-full max-w-40" />;
 };
 
 const PGSLogo = () => {
-  return <Pfg size={24} className="w-full h-full max-w-25 basis-56" />;
+  return <Pfg size={24} className="w-full h-full max-w-40" />;
 };
 
 export const Homepage = {
@@ -87,7 +87,7 @@ export const Homepage = {
     {
       ROLE: "Software Engineer",
       SUB_ROLE: "Custom Software Engineering Analyst",
-      ORG: "Accenture Solutions Pvt. Ltd.",
+      ORG: "Accenture Solutions",
       SPAN: "Dec 2024 - Present",
       LOC: "Pune, Maharashtra",
       LOGO: <AcnLogo />,
@@ -97,7 +97,7 @@ export const Homepage = {
     {
       ROLE: "Associate Software Engineer",
       SUB_ROLE: "Custom Software Engineering Associate",
-      ORG: "Accenture Solutions Pvt. Ltd.",
+      ORG: "Accenture Solutions",
       SPAN: "Dec 2022 - Nov 2024",
       LOC: "Pune, Maharashtra",
       LOGO: <AcnLogo />,
@@ -106,7 +106,7 @@ export const Homepage = {
     },
     {
       ROLE: "Cybersecurity Intern",
-      ORG: "Netlux Systems Pvt. Ltd.",
+      ORG: "Netlux Systems",
       SPAN: "Sept 2021 - May 2022",
       LOC: "Pune, Maharashtra",
       LOGO: <AcnLogo />,

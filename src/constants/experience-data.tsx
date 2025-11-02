@@ -18,6 +18,6 @@ export const experienceData: TimelineEntry[] = [
   },
   {
     title: "Sept 2021 - May 2022",
-    content: <Internship />,
+    content: <Internship index={3} />,
   },
 ];
