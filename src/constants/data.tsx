@@ -88,7 +88,7 @@ export const Homepage = {
       ROLE: "Software Engineer",
       SUB_ROLE: "Custom Software Engineering Analyst",
       ORG: "Accenture Solutions",
-      SPAN: "Dec 2024 - Present",
+      SPAN: "Dec 2024 - Nov 2025",
       LOC: "Pune, Maharashtra",
       LOGO: <AcnLogo />,
       DESCRIPTION:

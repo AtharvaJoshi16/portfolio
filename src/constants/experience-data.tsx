@@ -5,7 +5,7 @@ import { Principal } from "@/customs/experience/Principal";
 
 export const experienceData: TimelineEntry[] = [
   {
-    title: "Dec 2024 - Nov 2025",
+    title: "Nov 2025 - Present",
     content: <Principal index={0} />,
   },
   {
